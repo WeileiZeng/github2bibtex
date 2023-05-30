@@ -44,5 +44,11 @@ def main():
     print('The outputs have been wrote into {}'.format(filename))
 
 
+import sys
 if __name__=="__main__":
-    main()
+    if len(sys.argv) > 1:
+        print(sys.argv)
+        repo=sys.argv[-1]
+        print(repo2bib(repo))
+    else:
+        main()
